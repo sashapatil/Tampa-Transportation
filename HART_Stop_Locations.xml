@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <title>HART Stop Locations</title>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>stop_id: Stop ID found on physical transit stops.stop_code: Stop code used for HART stop identification (these values match the stop_id)stop_name: Name of transit stop.stop_lat: Latitude coordinate for transit stop.stop_long: Longitude coordinate for transit stop. </abstract>
+            <purpose>Point representation of HART Stop Locations</purpose>
+        </descript>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>PLANNING</themekey>
+                <themekey>SAFETY</themekey>
+                <themekey>TRANSIT</themekey>
+                <themekey>HART</themekey>
+                <themekey>LOCATION</themekey>
+            </theme>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>HART regularly updates route alignments and bus stops as part of service changes that occur at least three (3) times a year. HART works to keep updated data and shapefiles on these changes so they are reflected. For questions, please contact Omar Peerzada, AICP at peerzadao@gohart.org.</useconst>
+        <datacred>HART</datacred>
+    </idinfo>
+    <metainfo>
+        <metd>20240731</metd>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
