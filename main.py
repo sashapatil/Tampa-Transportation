@@ -361,8 +361,8 @@ import folium
 import branca
 
 # Paths
-shapefile_path = r"C:\Sasha\Projects\TampaTransportation\cb_2025_12_tract_500k\cb_2025_12_tract_500k.shp"
-hart_stops_path = r"C:\Sasha\Projects\TampaTransportation\HART_Stop_Locations\HART_Stop_Locations.shp"
+shapefile_path = "cb_2025_12_tract_500k.shp"
+hart_stops_path = "HART_Stop_Locations.shp"
 
 print("--- Step 1: Loading & Cleaning Census CSV Data Layers ---")
 # 1. Load the raw data layers
