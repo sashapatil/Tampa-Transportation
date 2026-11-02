@@ -11,7 +11,7 @@ Select a neighborhood and choose a proposal to see the simulated shift in employ
 # Load the master dataset for local calculations
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Sasha\Projects\TampaTransportation\tampa_transit_equity_final.csv")
+    return pd.read_csv("tampa_transit_equity_final.csv")
 
 
 df = load_data()

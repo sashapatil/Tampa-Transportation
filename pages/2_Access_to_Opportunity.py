@@ -15,7 +15,7 @@ By overlaying demographic need with structural job volume, planners can identify
 # 1. Load the unified dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Sasha\Projects\TampaTransportation\tampa_transit_equity_final.csv")
+    df = pd.read_csv("tampa_transit_equity_final.csv")
     return df
 
 
