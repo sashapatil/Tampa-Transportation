@@ -66,7 +66,7 @@ folium.TileLayer(
     name='Base Map',
     control=False
 ).add_to(opportunity_map)
-folium.TileLayer('cartodbpositron', name="Employment Context", control=False, overlay=False).add_to(opportunity_map)
+folium.TileLayer('OpenStreetMap', name="Employment Context", control=False, overlay=False).add_to(opportunity_map)
 
 # Find your true max value dynamically
 max_jobs = int(joined_gdf['total_jobs'].max())

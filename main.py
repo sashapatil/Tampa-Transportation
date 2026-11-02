@@ -504,7 +504,12 @@ folium.TileLayer(
     name='Base Map',
     control=False
 ).add_to(tampa_map)
-folium.TileLayer('cartodbpositron', name="Baseline Data Layers", control=False, overlay=False).add_to(tampa_map)
+folium.TileLayer(
+    'OpenStreetMap',
+    name="Baseline Data Layers",
+    control=False,
+    overlay=False
+).add_to(tampa_map)
 
 # 3. Setup configuration parameters with explicit color hex lists
 layers_config = [
