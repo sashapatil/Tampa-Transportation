@@ -499,7 +499,11 @@ print("\n--- Step 7: Generating Interactive Multi-Layer Toggle Dashboard ---")
 tampa_map = folium.Map(location=[27.9506, -82.4572], zoom_start=10, tiles=None)
 
 # 2. Lock the light grey map style as a permanent background element
-folium.TileLayer('cartodbpositron', name='Light Grey Map', control=False).add_to(tampa_map)
+folium.TileLayer(
+    'OpenStreetMap',
+    name='Base Map',
+    control=False
+).add_to(tampa_map)
 folium.TileLayer('cartodbpositron', name="Baseline Data Layers", control=False, overlay=False).add_to(tampa_map)
 
 # 3. Setup configuration parameters with explicit color hex lists

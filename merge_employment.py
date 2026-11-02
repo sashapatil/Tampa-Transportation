@@ -61,7 +61,11 @@ joined_gdf = joined_gdf.to_crs(epsg=4326)
 
 # Setup Folium Map with NO default tile layer to support LayerControl smoothly
 opportunity_map = folium.Map(location=[27.9506, -82.4572], zoom_start=10, tiles=None)
-folium.TileLayer('cartodbpositron', name='Light Grey Map', control=False).add_to(opportunity_map)
+folium.TileLayer(
+    'OpenStreetMap',
+    name='Base Map',
+    control=False
+).add_to(opportunity_map)
 folium.TileLayer('cartodbpositron', name="Employment Context", control=False, overlay=False).add_to(opportunity_map)
 
 # Find your true max value dynamically
