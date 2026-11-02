@@ -25,7 +25,7 @@ df = load_data()
 st.markdown("---")
 st.subheader("🗺️ Regional Activity Baseline")
 
-map_html_path = r"C:\Sasha\Projects\TampaTransportation\tampa_opportunity_map.html"
+map_html_path = "tampa_opportunity_map.html"
 
 if os.path.exists(map_html_path):
     with open(map_html_path, 'r', encoding='utf-8') as f:

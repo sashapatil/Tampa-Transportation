@@ -5,12 +5,14 @@ import branca
 import numpy as np
 
 # Paths
-shapefile_path = r"C:\Sasha\Projects\TampaTransportation\cb_2025_12_tract_500k\cb_2025_12_tract_500k.shp"
-hart_stops_path = r"C:\Sasha\Projects\TampaTransportation\HART_Stop_Locations\HART_Stop_Locations.shp"
+shapefile_path = "cb_2025_12_tract_500k.shp"
+hart_stops_path = "HART_Stop_Locations.shp"
 
 print("--- Step 1: Aggregating LODES Data ---")
-df_lodes = pd.read_csv(rf"C:\Sasha\Projects\TampaTransportation\Workplace_SI03_JT05_2023.csv", dtype={'w_geocode': str})
-
+df_lodes = pd.read_csv(
+    "Workplace_SI03_JT05_2023.csv",
+    dtype={'w_geocode': str}
+)
 # Ensure the IDs are treated purely as stripped strings
 df_lodes['clean_tract_id'] = df_lodes['w_geocode'].astype(str).str.strip().str.slice(0, 11)
 
@@ -22,7 +24,9 @@ tract_jobs = tract_jobs.rename(columns={
 })
 
 print("\n--- Step 2: Unifying with Tabular Master Data ---")
-df_existing = pd.read_csv(r"C:\Sasha\Projects\TampaTransportation\tampa_transit_equity_final.csv")
+df_existing = pd.read_csv(
+    "tampa_transit_equity_final.csv"
+)
 
 # Wipe out any legacy or broken job columns from previous attempts
 cols_to_overwrite = ['total_jobs', 'low_wage_jobs_under_1250', 'mid_wage_jobs_under_3333']
@@ -48,7 +52,10 @@ print(
 df_final[cols_to_overwrite] = df_final[cols_to_overwrite].fillna(0)
 
 # Save the updated master table
-df_final.to_csv(r"C:\Sasha\Projects\TampaTransportation\tampa_transit_equity_final.csv", index=False)
+df_final.to_csv(
+    "tampa_transit_equity_final.csv",
+    index=False
+)
 
 print("\n--- Step 3: Compiling Page 2 Spatial Interactive Map ---")
 shapes = gpd.read_file(shapefile_path)
