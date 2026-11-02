@@ -2,6 +2,8 @@
 
 An interactive spatial decision-support dashboard built for regional transportation planners (such as Tampa M.O.V.E.S. and the Hillsborough TPO). This tool identifies micro-level geographic disparities where vulnerable demographic populations heavily outweigh the physical footprint of the public transit network.
 
+See Project: https://tampa-mobility-gap-explorer.streamlit.app/
+
 ---
 
 ## 🎯 Project Vision
